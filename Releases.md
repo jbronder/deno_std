@@ -1,3 +1,98 @@
+### 2024.12.18
+
+#### @std/assert 1.0.10 (patch)
+
+- fix(assert): fix formatting for `assertNotEquals` error messages (#6246)
+
+#### @std/cbor 0.1.4 (patch)
+
+- feat(cbor): add encoding/decoding for `new Map()` instance (#6252)
+
+#### @std/cli 1.0.9 (patch)
+
+- feat(cli/unstable): add `promptMultipleSelect()` (#6223)
+- fix(cli/unstable): `promptMultipleSelect()` add `isTerminal()` check (#6263)
+- fix(cli/unstable): `promptSelect()` add `isTerminal()` check (#6264)
+- docs(cli): remove `parseArgs()` console logs from examples (#6268)
+- test(cli): add `promptSecret()` empty mask option test (#6273)
+- test(cli/unstable): add `promptSelect()` ETX test (#6267)
+- test(cli/unstable): add `promptMultipleSelect()` ETX test (#6266)
+- test(cli): add tests for `promptSecret()` (#6256)
+- test(cli/unstable): clean up `promptSelect()` tests (#6253)
+- test(cli/unstable): rewrite `Spinner` tests using stub (#6254)
+
+#### @std/data-structures 1.0.5 (patch)
+
+- fix(data-structures): ensure size consistency in BinarySearchTree.from (#6272)
+
+#### @std/encoding 1.0.6 (patch)
+
+- feat(encoding/unstable): Crockford base32 unstable support (#6238)
+
+#### @std/expect 1.0.10 (patch)
+
+- fix(expect): fix `expect.arrayContaining` bug (#6271)
+- fix(expect): always show custom message (#6217)
+- docs(expect): suggest using top-level code instead of beforeAll (#6240)
+
+#### @std/fs 1.0.7 (patch)
+
+- feat(fs/unstable): add `fs.stat` (#6258)
+- docs(fs/unstable): use `stat` function in `stat` example (#6275)
+
+#### @std/log 0.224.12 (patch)
+
+- docs(log): fix level name assertion in LogRecord example (#6269)
+
+#### @std/regexp 1.0.1 (patch)
+
+- fix(regexp): escape leading digit (#6208)
+
+#### @std/testing 1.0.7 (patch)
+
+- fix(testing): stop code execution in `describe.ignore` (#6237)
+
+### 2024.12.06
+
+#### @std/assert 1.0.9 (patch)
+
+- docs(assert): note the thrown diff in object_match.ts (#6227)
+- docs(assert): fix English in mod.ts (#6226)
+- docs(assert): add note and example for Blob comparison (#6210)
+
+#### @std/cbor 0.1.3 (patch)
+
+- perf(cbor): for encoding numbers, bigints, and dates (#6214)
+
+#### @std/cli 1.0.8 (patch)
+
+- feat(cli/unstable): export `/unstable-prompt-select` (#6212)
+- fix(cli/unstable): hide cursor while showing the selection with
+  `promptSelect()` (#6221)
+- refactor(cli): rewrite `promptSelect()` clear commands (#6215)
+
+#### @std/dotenv 0.225.3 (patch)
+
+- fix(dotenv): handle multiline variables on Windows (#6216)
+
+#### @std/expect 1.0.9 (patch)
+
+- fix(expect): fix error messages for `toMatchObject` (#6228)
+
+#### @std/http 1.0.12 (patch)
+
+- BREAKING(http/unstable): switch `params` and `info` args in `Handler` in
+  `route()` for more conveniency (#6094)
+- fix(http): handle HEAD requests in serveFile (#6218)
+
+#### @std/testing 1.0.6 (patch)
+
+- fix(testing): add missing methods to `test` alias of `it` (#6222)
+
+#### @std/text 1.0.9 (patch)
+
+- fix(text): use locale-independent letter case methods (#6204)
+
 ### 2024.11.25
 
 #### @std/cli 1.0.7 (patch)

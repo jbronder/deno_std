@@ -406,6 +406,7 @@ import { getAssertionState } from "@std/internal/assertion-state";
 import { AssertionError } from "@std/assert/assertion-error";
 import {
   type DescribeDefinition,
+  globalSanitizersState,
   type HookNames,
   type ItDefinition,
   type TestSuite,
@@ -584,9 +585,9 @@ export function it<T>(...args: ItArgs<T>) {
       ignore,
       only,
       permissions,
-      sanitizeExit,
-      sanitizeOps,
-      sanitizeResources,
+      sanitizeExit = globalSanitizersState.sanitizeExit,
+      sanitizeOps = globalSanitizersState.sanitizeOps,
+      sanitizeResources = globalSanitizersState.sanitizeResources,
     } = options;
     const opts: Deno.TestDefinition = {
       name,
@@ -836,6 +837,8 @@ function addHook<T>(
 
 /**
  * Run some shared setup before all of the tests in the suite.
+ * `beforeAll` is only provided for compatibility. Top-level
+ * initialization code should be used instead.
  *
  * @example Usage
  * ```ts
