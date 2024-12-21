@@ -1,1 +1,1 @@
-./fs/testdata/copy_dir/0.txt
+../copy_dir/0.txt
