@@ -136,7 +136,7 @@ async function copySymLink(
   options: InternalCopyOptions,
 ) {
   await ensureValidCopy(src, dest, options);
-  const originSrcFilePath = await Deno.readLink(src);
+  const originSrcFilePath = await Deno.realPath(src);
   const type = getFileInfoType(await Deno.lstat(originSrcFilePath));
   if (isWindows) {
     await Deno.symlink(originSrcFilePath, dest, {
@@ -160,7 +160,7 @@ function copySymlinkSync(
   options: InternalCopyOptions,
 ) {
   ensureValidCopySync(src, dest, options);
-  const originSrcFilePath = Deno.readLinkSync(src);
+  const originSrcFilePath = Deno.realPathSync(src);
   const type = getFileInfoType(Deno.lstatSync(originSrcFilePath));
   if (isWindows) {
     Deno.symlinkSync(originSrcFilePath, dest, {
